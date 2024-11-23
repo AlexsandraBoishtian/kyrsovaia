@@ -8,52 +8,8 @@
 <div class="rainbow-text">
 	<span class="block-line"><span><span style="color:#ff0000">К</span><span style="color:#ff6e00">у</span><span style="color:#ffdd00">р</span><span style="color:#b2ff00">с</span><span style="color:#48ff00">о</span><span style="color:#00ff26">в</span><span style="color:#00ff95">а</span><span style="color:#00fbff">я&nbsp;</span></span><span><span style="color:#0091ff">р</span><span style="color:#0022ff">а</span><span style="color:#4d00ff">б</span><span style="color:#b700ff">о</span><span style="color:#ff00d9">т</span><span style="color:#ff006a">а</span></span></span>
 </div> 
-		 <!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Диаграмма с Chart.js</title>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-</head>
-<body>
-    <canvas id="myChart" width="400" height="200"></canvas>
-    <script>
-        const ctx = document.getElementById('myChart').getContext('2d');
-        
-        const myChart = new Chart(ctx, {
-            type: 'bar', // тип диаграммы (например, 'bar', 'line', 'pie', и т.д.)
-            data: {
-                labels: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май'], // метки по оси X
-                datasets: [{
-                    label: 'Продажи', // название набора данных
-                    data: [12, 19, 3, 5, 2], // данные по меткам
-                    backgroundColor: [
-                        'rgba(255, 99, 132, 0.2)',
-                        'rgba(54, 162, 235, 0.2)',
-                        'rgba(255, 206, 86, 0.2)',
-                        'rgba(75, 192, 192, 0.2)',
-                        'rgba(153, 102, 255, 0.2)'
-                    ],
-                    borderColor: [
-                        'rgba(255, 99, 132, 1)',
-                        'rgba(54, 162, 235, 1)',
-                        'rgba(255, 206, 86, 1)',
-                        'rgba(75, 192, 192, 1)',
-                        'rgba(153, 102, 255, 1)'
-                    ],
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                scales: {
-                    y: {
-                        beginAtZero: true // ось Y начинается с 0
-                    }
-                }
-            }
-        });
-    </script> 
+		
+                 
 
 	
 </div>
@@ -81,16 +37,15 @@
 </div>
 <div class="glitch-wrapper">
    <div class="glitch" data-text="Hello World">Hello World</div>
-<body>
+
  
 
 
 
-<head>
+
 <title>Моя первая страница</title>
 <h1> <font color=’#800080’>Форматирование текста</font>
 </h1>
-</body>
 <br></br>
 <big><pre>
 Эта таблица создана при помощи знака табуляции
@@ -100,5 +55,18 @@
 </pre>
 <b><big><font color=’#0000FF’>Формулы</font></big></b>
 <u><p align="right"Выравнивание по правому краю/p></u>
-<a href="https://www.figma.com/design/IPPJm9PGD4UrwBCG0IEHqE/op29921488's-team-library?node-id=3311-2&node-type=canvas&t=TLmqtVhQg5qohB2t-0">фигма</a>
+<a href="https://www.figma.com/design/IPPJm9PGD4UrwBCG0IEHqE/op29921488's-team-library?node-id=3311-2&node-type=canvas&t=TLmqtVhQg5qohB2t-0">фигма</a>  
+	<html lang="ru">
+
+    <meta charset="UTF-8">
+    <title>Диаграмма</title>
+    <style> canvas { border: 1px solid #000; } </style>
+
+
+    <h2>Линейная диаграмма</h2>
+    <canvas id="myChart" width="400" height="300"></canvas>
+    
+    <script> // Получаем контекст для рисования на канвасе const canvas = document.getElementById('myChart'); const ctx = canvas.getContext('2d'); // Данные для диаграммы const data = [10, 20, 30, 40, 50]; // Размеры канваса const width = canvas.width; const height = canvas.height; // Ширина одной колонки const barWidth = width / data.length; // Рисуем оси координат ctx.beginPath(); ctx.moveTo(0, height); ctx.lineTo(width, height); // ось X ctx.stroke(); ctx.beginPath(); ctx.moveTo(0, 0); ctx.lineTo(0, height); // ось Y ctx.stroke(); // Рисуем столбцы for (let i = 0; i < data.length; i++) { const x = i * barWidth + barWidth / 2; const y = height - data[i]; ctx.fillStyle = 'blue'; ctx.fillRect(x - barWidth / 4, y, barWidth / 2, height - y); } </script>  
+	</head>
+</body>
 </html>
