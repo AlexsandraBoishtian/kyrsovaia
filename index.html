@@ -52,7 +52,18 @@
 Фамилия Имя Отчество Год рождения
 Иванов Иван Иванович 1985
 Петров Петр Петрович 1878
-</pre>
+</pre> 
+	<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>График</title>
+    <style> canvas { border: 1px solid #000; } </style>
+</head>
+<body>
+    <h2>Линейный график</h2>
+    <canvas id="myChart" width="400" height="300"></canvas>
+    
+    <script> // Получаем элемент canvas по его ID const canvas = document.getElementById('myChart'); // Создаем контекст для рисования const ctx = canvas.getContext('2d'); // Координаты точек для построения графика const points = [ { x: 50, y: 250 }, { x: 100, y: 200 }, { x: 150, y: 220 }, { x: 200, y: 180 }, { x: 250, y: 210 }, { x: 300, y: 170 }, { x: 350, y: 190 } ]; // Функция для рисования линии между двумя точками function drawLine(ctx, startX, startY, endX, endY) { ctx.beginPath(); ctx.moveTo(startX, startY); ctx.lineTo(endX, endY); ctx.stroke(); } // Рисуем оси координат ctx.moveTo(50, 0); // Начало оси Y ctx.lineTo(50, 280); // Конец оси Y ctx.moveTo(40, 270); // Метка начала оси X ctx.lineTo(360, 270); // Конец оси X ctx.stroke(); // Отрисовка осей // Рисуем точки и соединяем их линиями for (let i = 0; i < points.length - 1; i++) { let pointA = points[i]; let pointB = points[i + 1]; drawLine(ctx, pointA.x, pointA.y, pointB.x, pointB.y); } </script>
   
 
 	</head>
