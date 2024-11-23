@@ -55,7 +55,46 @@
 Петров Петр Петрович 1878
 </pre> 
 	
-
-	</head>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>График с Chart.js</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        /* Устанавливаем размер для canvas */
+        #myChart {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>График продаж за 2023 год</h1>
+    <canvas id="myChart" width="600" height="400"></canvas>
+    <script>
+        const ctx = document.getElementById('myChart').getContext('2d');
+        const myChart = new Chart(ctx, {
+            type: 'line', // тип графика (например, 'line', 'bar', 'pie')
+            data: {
+                labels: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь'], // метки по оси X
+                datasets: [{
+                    label: 'Продажи', // название набора данных
+                    data: [10, 20, 15, 30, 25, 35], // данные для графика
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)', // цвет фона области графика
+                    borderColor: 'rgba(75, 192, 192, 1)', // цвет линии графика
+                    borderWidth: 2 // толщина линии
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true // ось Y начинается с 0
+                    }
+                }
+            }
+        });
+    </script>
 </body>
 </html>
+
