@@ -1,0 +1,130 @@
+.canvas {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 800px;
+}
+.unit {
+  fill: none;
+  stroke-width: 10;
+}
+
+.unit:nth-child(1) {
+  stroke: #86cfa3;
+}
+
+.unit:nth-child(2) {
+  stroke: #a2c6e0;
+}
+
+.unit:nth-child(3) {
+  stroke: #ffc7ec;
+}
+.unit:nth-child(4) {
+  stroke: #1faee9;
+
+}
+.unit:nth-child(5) {
+  stroke: #007dff;
+}
+.unit:nth-child(6) {
+  stroke: #ba7fa2;
+}
+.unit:nth-child(7) {
+  stroke: #c8a696;
+}
+.unit:nth-child(8) {
+  stroke: #dcd36a;
+}
+.unit:nth-child(1) {
+  stroke: #86cfa3;
+  stroke-dasharray: 10 100;
+}
+
+.unit:nth-child(2) {
+  stroke: #a2c6e0;
+  stroke-dasharray: 11 100;
+  stroke-dashoffset: -10;
+}
+
+.unit:nth-child(3) {
+  stroke: #ffc7ec;
+  stroke-dasharray: 11 100;
+  stroke-dashoffset: -21;
+}
+
+
+.unit:nth-child(4) {
+  stroke: #1faee9;
+  stroke-dasharray: 11 100;
+  stroke-dashoffset: -32;
+}
+
+.unit:nth-child(5) {
+  stroke: #007dff;
+  stroke-dasharray: 11 100;
+  stroke-dashoffset: -89;
+}
+.unit:nth-child(6) {
+  stroke: #ba7fa2;
+  stroke-dasharray: 11 100;
+  stroke-dashoffset: -40;
+}
+.unit:nth-child(7) {
+  stroke: #c8a696;
+  stroke-dasharray: 11 100;
+  stroke-dashoffset: -50;
+}
+.unit:nth-child(8) {
+  stroke: #dcd36a;
+  stroke-dasharray: 11 100;
+  stroke-dashoffset: -62;
+}
+.caption-item::before {
+  content: ";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 20px;
+  height: 20px;
+
+  border-radius: 8px;
+}
+
+.caption-item:nth-child(1)::before {
+  background-color: #86cfa3;
+}
+
+.caption-item:nth-child(2)::before {
+  background-color: #a2c6e0;
+}
+
+.caption-item:nth-child(3)::before {
+  background-color: #ffc7ec;
+}
+@keyframes render {
+  0% {
+    stroke-dasharray: 0 100;
+  }
+}
+.unit {
+ 
+  animation-name: render;
+  animation-duration: 1.5s;
+}
+.unit:hover {
+  opacity: 0.8;
+  stroke-width: 12;
+}
+.unit {
+  /* Здесь должны быть свойства, заданные ранее */
+
+  transition-property: all;
+  transition-duration: 1.5s;
+}
+.hovered {
+  opacity: 0.8;
+  stroke-width: 12;
+}
