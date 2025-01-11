@@ -1,1 +1,1 @@
-<a href="html\html.html">пример диаграммы</a>
+<link href="style.css" rel="stylesheet">
